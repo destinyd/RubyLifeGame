@@ -32,7 +32,7 @@ class Event
   end
 
   def human_result
-    "#{@type} choice #{@choice} is#{ ' not' unless success?} successs, get #{result}"
+    "#{type} is #{@how_hard} hard choice #{@choice} is#{ ' not' unless success?} successs, get #{result}"
   end
 
   def health

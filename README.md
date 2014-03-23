@@ -20,7 +20,7 @@ When event success, you will get money and happy, they are the scores of this li
 Player will die when health <= 0, and Game Over...
 
 ### last
-Welcome to submit scores and code at issues.
+Welcome to submit your best scores and code at [issue#1](https://github.com/destinyd/RubyLifeGame/issues/1).
 
 ## Welcome to join the development
 I write it just for fun.
