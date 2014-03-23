@@ -10,6 +10,12 @@ You must be install ruby above 2.0.0.
 
 ### second
 Clone this project.
+```
+git clone git@github.com:destinyd/RubyLifeGame.git
+cd RubyLifeGame
+cp code.example.rb code.rb
+ruby game_controller.rb
+```
 
 ### third
 Edit code.rb to rewrite handle method for play.
@@ -37,6 +43,12 @@ If you like it or like making games, we can discuss.
 
 ### 其次
 把这个项目Clone下来
+```
+git clone git@github.com:destinyd/RubyLifeGame.git
+cd RubyLifeGame
+cp code.example.rb code.rb
+ruby game_controller.rb
+```
 
 ### 再次
 修改code.rb中的handle方法来进行游戏。
