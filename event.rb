@@ -4,27 +4,22 @@ class Event
   def initialize(args)
     @params = args
     raise 'need params' unless @params
-    @type = @params[:type]
+    t = @params[:type]
 
-    @age = @params[:age]
     @is_choice = false
     @how_hard = rand(100)
-    extend Object.const_get("EventCore::#{@type.capitalize}")
-  end
-
-  def how_hard
-    @how_hard
+    extend Object.const_get("EventCore::#{t.capitalize}")
   end
 
   def params
     {
-      money: @money,
-      age: @age,
-      health: @health,
-      eq: @eq,
-      charm: @charm,
-      how_hard: @how_hard,
-      type: @type
+      money: money,
+      age: age,
+      health: health,
+      eq: eq,
+      charm: charm,
+      how_hard: how_hard,
+      type: type
     }
   end
 
@@ -32,14 +27,49 @@ class Event
     if !@is_choice and ATTITUDE.include?(method)
       send(method)
       @is_choice = true
+      @choice = method
     end
   end
 
   def human_result
-    "#{@type} is#{ ' not' unless success?} successs, get #{result}"
+    "#{@type} choice #{@choice} is#{ ' not' unless success?} successs, get #{result}"
   end
 
+  def health
+    @params[:health]
+  end
+  def charm
+    @params[:charm]
+  end
+
+  def money
+    @params[:money]
+  end
+
+  def age
+    @params[:age]
+  end
+
+  def how_hard
+    @how_hard
+  end
+
+  def type
+    @params[:type]
+  end
+
+  def eq
+    @params[:eq]
+  end
+
+  def money
+    @params[:money]
+  end
   private
+  def iq
+    @params[:iq]
+  end
+
   def rp
     @params[:rp]
   end

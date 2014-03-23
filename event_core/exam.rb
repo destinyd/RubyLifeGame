@@ -8,11 +8,7 @@ module EventCore
         happy: success? ? calculate_happy : - calculate_happy
       }
     end
-
-    def human_result
-      "#{@type} is#{ ' not' unless success?} successs, get #{result}"
-    end
-
+    protected
     def hard
       @actual_value = iq * 1.5
       @result_health = -2
@@ -29,10 +25,6 @@ module EventCore
       @actual_value  = iq * 1.0
       @result_health = 0
       @happy_rate = 2
-    end
-    protected
-    def iq
-      @params[:iq]
     end
   end
 end
